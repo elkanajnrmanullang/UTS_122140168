@@ -1,0 +1,213 @@
+.table .table-heading p {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.table .table-content table {
+  background-color: #ffffff;
+  width: 100%;
+  display: table;
+  justify-content: center;
+  margin: auto;
+}
+
+.table-content td {
+  text-align: left;
+  padding: 12px 400px 12px 12px;
+  font-weight: 600;
+}
+
+.table-content th {
+  padding: 12px 400px 12px 12px;
+  text-transform: uppercase;
+}
+
+.table-content th {
+  background-color: #8e8e8e;
+}
+
+.table-content tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+div.table {
+  margin-top: 3rem;
+  width: 100%;
+  height: 90vh;
+  border-radius: 10%;
+}
+
+.table .table-body {
+  display: flex;
+  justify-content: center;
+}
+
+.table__header h1 {
+  width: 100%;
+  height: 10%;
+  background-color: #fff4;
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.table__body {
+  width: 95%;
+  max-height: calc(89% - 1.6rem);
+  background-color: #fffb;
+
+  margin: 0.8rem auto;
+  border-radius: 0.6rem;
+
+  overflow: auto;
+  overflow: overlay;
+}
+
+.table__body::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.table__body::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: #0004;
+  visibility: hidden;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+.table table {
+  width: 100%;
+}
+
+.table td img {
+  width: 36px;
+  height: 36px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+
+  vertical-align: middle;
+}
+
+.table table,
+th,
+td {
+  border-collapse: collapse;
+  padding: 1rem;
+}
+
+.table thead th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #afafb0fe;
+  cursor: pointer;
+  text-transform: capitalize;
+  border-collapse: collapse;
+  padding: 1rem;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #0000000b;
+}
+
+.table tbody tr {
+  --delay: 0.1s;
+  transition: 0.5s ease-in-out var(--delay), background-color 0s;
+}
+
+.table tbody tr.hide {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.table tbody tr:hover {
+  background-color: #fff6 !important;
+}
+
+.table tbody tr td,
+.table tbody tr td p,
+.table tbody tr td img {
+  transition: 0.2s ease-in-out;
+}
+
+.table tbody tr.hide td,
+.table tbody tr.hide td p {
+  padding: 0;
+  font: 0 / 0 sans-serif;
+  transition: 0.2s ease-in-out 0.5s;
+}
+
+.table tbody tr.hide td img {
+  width: 0;
+  height: 0;
+  transition: 0.2s ease-in-out 0.5s;
+}
+
+/* ========================== RESPONSIVE ========================== */
+@media (max-width: 1000px) {
+  td:not(:first-of-type) {
+    min-width: 12.1rem;
+  }
+}
+
+@media print {
+  .table,
+  .table__body {
+    overflow: visible;
+    height: auto !important;
+    width: auto !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .table-content table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .table-content td,
+  .table-content th {
+    padding: 8px;
+  }
+}
+
+@media (min-width: 576px) {
+  .table-content table {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .table-content td,
+  .table-content th {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .table-content table {
+    width: 90%;
+  }
+
+  .table-content td,
+  .table-content th {
+    padding: 12px 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .table-content table {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .table-content td,
+  .table-content th {
+    padding: 12px 40px;
+  }
+}
